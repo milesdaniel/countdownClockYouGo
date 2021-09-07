@@ -1,0 +1,40 @@
+body {
+    background-image: url(/assets/casey-horner-RmoWqDCqN2E-unsplash.jpg);
+    background-color: #204455;
+    background-size: cover;
+    background-repeat: no-repeat;
+    font-family: 'Roboto Mono', monospace;
+}
+
+header {
+    display: block;
+    text-align: center;
+    line-height: 45px;
+    color:aliceblue
+}
+
+header label {
+    font-size: 24px;
+}
+
+#countdowndate {
+    text-align: center;
+    height: 35px;
+    margin: 20px;
+
+}
+
+.doombutton, .yaybutton {
+    margin: 20px;
+    height: 30px;
+}
+.countdownclock {
+    display: flex;
+    height: 100%;
+    width: 100%;
+    padding: 150px 0;
+    justify-content: space-evenly;
+    color:aliceblue;
+    font-size: 24px;
+
+}

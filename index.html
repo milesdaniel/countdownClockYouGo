@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <title>The Countdown Begins</title>
+        <link rel="stylesheet" href="stylesheet.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <script src="script.js"></script>
+        <header>
+            <h1>Begin Your Countdown!</h1>
+            <label for="countdowndate">Pick a Date!</label>
+            <br>
+            <input type="date" id="countdowndate" name="countdowndate">
+            <br>
+            <label for="feelingbutton">How are we feeling about this date?</label>
+            <br>
+            <input type="button" class="doombutton" name="feelingbutton" value="We're Doomed!">
+            <input type="button" class="yaybutton" name="feelingbutton" value="We're Saved!">
+        </header>
+        <div class="countdownclock">
+            <div class="days">
+                <h3 class="units">days</h3>
+            </div>
+            <div class="hours">
+                <h3 class=units>hours</h3>
+            </div>
+            <div class="minutes">
+                <h3 class=units>minutes</h3>
+            </div>
+            <div class="seconds">
+                <h3 class=units>seconds</h3>
+            </div>
+        </div>
+    </body>
+</html>
