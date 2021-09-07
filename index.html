@@ -9,7 +9,6 @@
         <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap" rel="stylesheet">
     </head>
     <body>
-        <script src="script.js"></script>
         <header>
             <h1>Begin Your Countdown!</h1>
             <label for="countdowndate">Pick a Date!</label>
@@ -18,22 +17,27 @@
             <br>
             <label for="feelingbutton">How are we feeling about this date?</label>
             <br>
-            <input type="button" class="doombutton" name="feelingbutton" value="We're Doomed!">
-            <input type="button" class="yaybutton" name="feelingbutton" value="We're Saved!">
+            <input type="button" class="doombutton" name="feelingbutton" value="We're Doomed!" onclick="countDown()">
+            <input type="button" class="yaybutton" name="feelingbutton" value="We're Saved!" onclick="countDown()">
         </header>
         <div class="countdownclock">
-            <div class="days">
+            <div class="container-days">
+                <h3 class="day">0</h3>
                 <h3 class="units">days</h3>
             </div>
-            <div class="hours">
+            <div class="container-hours">
+                <h3 class="hour">0</h3>
                 <h3 class=units>hours</h3>
             </div>
-            <div class="minutes">
+            <div class="container-minutes">
+                <h3 class="minute">0</h3>
                 <h3 class=units>minutes</h3>
             </div>
-            <div class="seconds">
+            <div class="container-seconds">
+                <h3 class="second">0</h3>
                 <h3 class=units>seconds</h3>
             </div>
         </div>
+    <script src="script.js"></script>
     </body>
 </html>

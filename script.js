@@ -1,30 +1,22 @@
-////TODO: Grab Current Time
-let currentTime = new Date().getTime();
 
-/// Grab Target Time
-let targetTime = new Date("Jan 21, 2035 12:32:14").getTime();
-
-/// Grab The Difference
-let timeDifference = targetTime - currentTime;
-
-/// create a function named countDown
 const countDown = () => {
-  let days = Math.floor(timeDifference / (1000 * 60 * 60 * 24));
-  let hours = Math.floor(
+  let targetTime = new Date(document.getElementById('countdowndate').value).getTime();
+  let currentTime = new Date().getTime();
+  let timeDifference = targetTime - currentTime;
+
+  //Calculate time
+  let textDays = Math.floor(timeDifference / (1000 * 60 * 60 * 24));
+  let textHours = Math.floor(
     (timeDifference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60),
   );
-  let minutes = Math.floor((timeDifference % (1000 * 60 * 60)) / (1000 * 60));
-  let seconds = Math.floor((timeDifference % (1000 * 60)) / 1000);
-  console.log(`$days days, $hours hours, $minutes minutes, $seconds seconds left!`)
+  let textMinutes = Math.floor((timeDifference % (1000 * 60 * 60)) / (1000 * 60));
+  let textSeconds = Math.floor((timeDifference % (1000 * 60)) / 1000);
+  
+  document.querySelector(".day").innerText = textDays;
+  document.querySelector(".hour").innerText = textHours;
+  document.querySelector(".minute").innerText = textMinutes;
+  document.querySelector(".second").innerText = textSeconds;
+  
+  setInterval(countDown, 1000)
 };
 
-/// use timeDifference to calculate days, hours, minutes, seconds
-
-// console.log("days", days);
-// console.log("hours", hours);
-// console.log("minutes", minutes);
-// console.log("seconds", seconds);
-
-setInterval(countDown(){}, 1000);
-/// use setInterval to run the countDown function every second...
-// display the results of each variable in html hint: innerText

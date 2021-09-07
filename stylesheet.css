@@ -1,3 +1,12 @@
+@font-face {
+    font-family: 'alarm_clockregular';
+    src: url('/assets/alarm_clock/alarm_clock-webfont.woff2') format('woff2'),
+         url('/assets/alarm_clock/alarm_clock-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
 body {
     background-image: url(/assets/casey-horner-RmoWqDCqN2E-unsplash.jpg);
     background-color: #204455;
@@ -30,11 +39,16 @@ header label {
 }
 .countdownclock {
     display: flex;
-    height: 100%;
-    width: 100%;
+    min-height: 100vh;
     padding: 150px 0;
     justify-content: space-evenly;
     color:aliceblue;
     font-size: 24px;
+    text-align: center;
 
+}
+
+.day, .hour, .minute, .second {
+    font-family: 'alarm_clockregular';
+    font-size: 85px;
 }
